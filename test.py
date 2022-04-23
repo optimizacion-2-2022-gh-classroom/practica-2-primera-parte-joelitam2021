@@ -1,4 +1,4 @@
-from src.bellman_ford.bellman_ford import *
+from src.opt2.bellman_ford import *
 import numpy as np 
 import networkx as nx
 import bellmanford as bf
