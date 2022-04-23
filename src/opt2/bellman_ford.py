@@ -4,19 +4,33 @@ def bf_negative_cycle(graph, node_ini=None, distance_ini=np.inf):
     """
     Description
     -------
+
+    
     Get the shortest path using the Bellman-Ford algorithm, 
     modify parameters monitoring: initial node and initial distance
+
+    
     param:
     -------
+
+    
     G : Networkx DiGraph. The input graph.
     node_ini : Optional parameter, indicate begining node
     distance_ini : Deafault value is inf
+
+
+    
     returns
     -------
+
+
+    
     3 list
         A list with the shortest path.
         A list of relaxation
         A list with min spanning tree
+
+        
     """
     
     if node_ini is None:
