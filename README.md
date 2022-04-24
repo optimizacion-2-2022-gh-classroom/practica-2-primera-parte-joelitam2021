@@ -67,9 +67,25 @@ Además se realizarón consultas entre los integrantes para resolver problemas e
 
 ## Comando de docker
 
+Se cuenta con una imagen de docker que contiene preisntalado la nueva version deel paquete creado para ejecutar el método de Bellman Ford, y el en este link se puede ver el [Dockerfile](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/blob/main/dockerfiles/pkg/Dockerfile)
+
+Para ejecutar el docker se usa la siguiente instrucción:
+
+docker run --rm -v \<ruta a mi directorio\> :/datos --name jupyterlab_practica2 -p 8888:8888 -d joelitam2021/pkg_practica2_parte1:0.1
+
+donde <ruta a mi directorio> deberá sustituirse por la ruta local donde desee clonar este docker.
+
+Después de correr la imagen de docker en su computadora, podrá acceder al jupyterlab a través de un browser usando la siguiente dirección:
+
+http://localhost:8888
+
+Le pedirá una contraseña, que por defaul es qwerty.
+
 ## Botón de binder
 
-https://mybinder.org/v2/gh/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021.git/main
+Se cuenta con la opción de correr el paquete usando la herramienta de Binder
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021.git/main)
 
 ## Referencias
 
