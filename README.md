@@ -67,6 +67,8 @@ Además se realizarón consultas entre los integrantes para resolver problemas e
 
 - Archivo [test.py](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/blob/main/test.py): archivo que contiene los test al paquete.
 
+- Archivo [Doc_apoyo.ipynb](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/blob/main/Doc_apoyo.ipynb) : archivo que contiene tablas con corridas con distintos parámetros, resultados y algunas fechas de lanzamiento.
+
 ## Comando de docker
 
 Se cuenta con una imagen de docker que contiene preisntalado la nueva version deel paquete creado para ejecutar el método de Bellman Ford, y el en este link se puede ver el [Dockerfile](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/blob/main/dockerfiles/pkg/Dockerfile)
