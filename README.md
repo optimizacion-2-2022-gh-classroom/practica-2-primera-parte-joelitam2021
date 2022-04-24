@@ -48,9 +48,21 @@ Paulina: notebook que realiza tabla con las diferentes opciones de parámetros i
 
 # Descripción de archivos:
 
-- Carpeta *notebooks*: Contiene las pruebas iniciales de las corridas, pipelines de monitoreo de parámetros.
+- Carpeta [.github/workflows](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/tree/main/.github/workflows): Contiene los archivos *.yml* encargados de lanzar la construcción del *docker*, la documentación del paquete y el lanzamiento de los *tests*
 
-- Carpeta *src*: Contiene el código del paquete *bellman ford*.
+- Carpeta [aws](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/tree/main/aws): Contiene evidencia del uso de la infraestructura de aws, en ella estan 2 carpetas, [pruebas](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/tree/main/aws/pruebas) y [proceso_completo](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/tree/main/aws/proceso_completo, en la primera carpeta se tienen las pruebas y diversas corridas realizadas, y en la segunda ya se tiene el proceso completo de la última versión del pipeline.
+
+- Carpeta [notebooks](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/tree/main/notebooks): Contiene las pruebas iniciales de las corridas, pipelines de monitoreo de parámetros.
+
+- Carpeta [src](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/tree/main/src): Contiene el código del paquete *bellman ford*.
+
+- Archivo [reporte_equipo_1_parte_1_practica_2.ipynb](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/blob/main/reporte_equipo_1_parte_1_practica_2.ipynb): es el pipeline final con los parámetros a monitorear y las corridas para obtener la tabla de los parámetros.
+
+- Archivo [requirements.txt](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/blob/main/requirements.txt): listado de paqueterías necesarias para el paquete y test.
+
+- Archivo [setup.py](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/blob/main/setup.py): instalador del paquete.
+
+- Archivo [test.py](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/blob/main/test.py): archivo que contiene los test al paquete.
 
 # Comando de docker
 
