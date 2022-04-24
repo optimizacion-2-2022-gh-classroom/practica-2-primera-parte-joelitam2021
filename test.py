@@ -79,5 +79,26 @@ class Pruebas(unittest.TestCase):
         len_short_path = len(list_path)
         
         self.assertTrue(len_short_path <= path_more_short) 
+
+    def test_dist_inicial(self):
+        """
+        Válida que la distancia inicial sea mayor o igual a 1.
+        """
+        edges = [["5", "6", 0.86],
+         ["6", "5", -0.94],
+         ["3", "3",0],
+         ["0","0",0],
+         ["1","1",0],
+         ["2","2",0],
+         ["4","4",0]]
+        
+        G = nx.DiGraph()        
+        G.add_weighted_edges_from(edges)
+
+        distancia_inicial = np.inf
+        
+        list_path, list_val, pred = bf_negative_cycle(G, distance_ini=distancia_inicial)
+
+        self.assertTrue(distancia_inicial >= 1)
         
 unittest.main(argv=[''], verbosity=2, exit=False)
