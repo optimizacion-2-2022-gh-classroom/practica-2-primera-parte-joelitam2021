@@ -75,7 +75,7 @@ Para ejecutar el docker se usa la siguiente instrucción:
 
 docker run --rm -v \<ruta a mi directorio\> :/datos --name jupyterlab_practica2 -p 8888:8888 -d joelitam2021/pkg_practica2_parte1:0.1
 
-donde <ruta a mi directorio> deberá sustituirse por la ruta local donde desee clonar este docker.
+donde ***\<ruta a mi directorio\>*** deberá sustituirse por la ruta local donde desee clonar este *docker*.
 
 Después de correr la imagen de docker en su computadora, podrá acceder al jupyterlab a través de un browser usando la siguiente dirección:
 
