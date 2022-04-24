@@ -37,6 +37,7 @@ def bf_negative_cycle(graph, node_ini=None, distance_ini=np.inf):
     if node_ini is None:
         n_nodes = len(graph.nodes())
     else:
+        assert node_ini <= len(graph.nodes), f"El nodo definido es mayor a los del grafo. Deberia de ser menor a {len(graph.nodes)}."
         n_nodes = node_ini
             
     n = len(graph.nodes()) + 1

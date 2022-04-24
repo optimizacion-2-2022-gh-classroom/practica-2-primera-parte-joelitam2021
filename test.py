@@ -100,5 +100,28 @@ class Pruebas(unittest.TestCase):
         list_path, list_val, pred = bf_negative_cycle(G, distance_ini=distancia_inicial)
 
         self.assertTrue(distancia_inicial >= 1)
+
+    def test_dist_inicial(self):
+        """
+        Válida que el nodo inicial no sea mayor a los existentes.
+        """
+        edges = [["5", "6", 0.86],
+         ["6", "5", -0.94],
+         ["3", "3",0],
+         ["0","0",0],
+         ["1","1",0],
+         ["2","2",0],
+         ["4","4",0]]
+        
+        G = nx.DiGraph()        
+        G.add_weighted_edges_from(edges)
+
+        distancia_inicial = np.inf
+        
+        list_path, list_val, pred = bf_negative_cycle(G, distance_ini=distancia_inicial)
+
+        node_ini = len(G)
+
+        self.assertTrue(node_ini <= len(G.nodes()))
         
 unittest.main(argv=[''], verbosity=2, exit=False)
