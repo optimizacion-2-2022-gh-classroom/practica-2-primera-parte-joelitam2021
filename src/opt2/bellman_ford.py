@@ -32,6 +32,7 @@ def bf_negative_cycle(graph, node_ini=None, distance_ini=np.inf):
 
         
     """
+    assert distance_ini>=1, f"La distancia inicial debe de ser mayor o igual a 1. El parámetro fue igual a {distance_ini}"
     
     if node_ini is None:
         n_nodes = len(graph.nodes())
