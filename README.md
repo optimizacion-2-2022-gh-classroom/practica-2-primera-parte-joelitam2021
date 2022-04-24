@@ -1,4 +1,4 @@
-# **Parte 1 de la práctica II, Optimización 2: uso de *Minikube, Kubeflow* y *Kale* para construcción y lanzamiento de pipelines de procesamiento y experimentación del paquete construído en la práctica 1 para resolver problemas de optimización convexa.**
+## **Parte 1 de la práctica II, Optimización 2: uso de *Minikube, Kubeflow* y *Kale* para construcción y lanzamiento de pipelines de procesamiento y experimentación del paquete construído en la práctica 1 para resolver problemas de optimización convexa.**
 
 
 ## Descripción: 
@@ -34,9 +34,9 @@ Además se realizarón consultas entre los integrantes para resolver problemas e
 
 ### Individual
 
-Aide: análisis de parámetros en el problema de optimización y en el método númerico, creación de funciones de monitoreo de parámetros, creación inicial del docker con kale, lanzamientos de pipelines usando infraestructura de aws y actualización de tests usados en la práctica 1 parte 2, debido a que la función del método *bellman ford* cambio para el monitoreo de parámetros.
+*Aide*: análisis de parámetros en el problema de optimización y en el método númerico, creación de funciones de monitoreo de parámetros, creación inicial del docker con kale, lanzamientos de pipelines usando infraestructura de aws y actualización de tests usados en la práctica 1 parte 2, debido a que la función del método *bellman ford* cambio para el monitoreo de parámetros.
 
-Paulina: notebook que realiza tabla con las diferentes opciones de parámetros iniciales posibles y se actualiza documentación del paquete utilizando gh-pages.
+*Paulina*: notebook que realiza tabla con las diferentes opciones de parámetros iniciales posibles y se actualiza documentación del paquete utilizando gh-pages.
 
 ## Documentación
 
