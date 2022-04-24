@@ -69,6 +69,8 @@ Además se realizarón consultas entre los integrantes para resolver problemas e
 
 ## Botón de binder
 
+https://mybinder.org/v2/gh/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021.git/main
+
 ## Referencias
 
 * [Crypto Trading and Arbitrage Identification Strategies](https://nbviewer.org/github/rcroessmann/sharing_public/blob/master/arbitrage_identification.ipynb)
