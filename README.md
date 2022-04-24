@@ -1,13 +1,13 @@
-**Parte 1 de la práctica II, Optimización 2: uso de *Minikube, Kubeflow* y *Kale* para construcción y lanzamiento de pipelines de procesamiento y experimentación del paquete construído en la práctica 1 para resolver problemas de optimización convexa.**
+# **Parte 1 de la práctica II, Optimización 2: uso de *Minikube, Kubeflow* y *Kale* para construcción y lanzamiento de pipelines de procesamiento y experimentación del paquete construído en la práctica 1 para resolver problemas de optimización convexa.**
 
 
-# Descripción: 
+## Descripción: 
 Experimentación, construcción de pipelines vía Minikube, Kubeflow y Kale y reimplementaciones del método numérico realizado en la práctica 1 que resuelva problemas de optimización convexa de pequeña escala.
 
 El objetivo es realizar experimentos con las herramientas de Minikube, kubeflow y Kale para detectar con qué valores no funcionan sus programas. Cambien puntos iniciales, cambien criterios de paro, elijan diferentes ejemplos que los que utilizaron en los tests por ejemplo y reimplementen sus métodos que están en su paquete para mejorarlo y robustecerlo. Estos cambios de implementación deben de reflejarse automáticamente vía Github actions en la documentación del paquete, tests y en sus imágenes de Docker.
 
 
-# Divisón del equipo
+## Divisón del equipo
 
 | User| Equipo | Tareas | Roles | 
 |:---:|:---:|:---:|:---:|
@@ -16,9 +16,6 @@ pautrejo | 1 | Tabla con las corridas con los diferentes parámetros y documenta
 |:---:|:---:|:---:|:---:|
 
 ## Trabajo: 
-
-### Resúmen
-
  
 ### Equipo
  
@@ -41,16 +38,16 @@ Aide: análisis de parámetros en el problema de optimización y en el método n
 
 Paulina: notebook que realiza tabla con las diferentes opciones de parámetros iniciales posibles y se actualiza documentación del paquete utilizando gh-pages.
 
-# Documentación
+## Documentación
 
  [Bellman Ford](https://optimizacion-2-2022-gh-classroom.github.io/practica-2-primera-parte-joelitam2021/)
 
 
-# Descripción de archivos:
+## Descripción de archivos:
 
 - Carpeta [.github/workflows](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/tree/main/.github/workflows): Contiene los archivos *.yml* encargados de lanzar la construcción del *docker*, la documentación del paquete y el lanzamiento de los *tests*
 
-- Carpeta [aws](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/tree/main/aws): Contiene evidencia del uso de la infraestructura de aws, en ella estan 2 carpetas, [pruebas](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/tree/main/aws/pruebas) y [proceso_completo](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/tree/main/aws/proceso_completo, en la primera carpeta se tienen las pruebas y diversas corridas realizadas, y en la segunda ya se tiene el proceso completo de la última versión del pipeline.
+- Carpeta [aws](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/tree/main/aws): Contiene evidencia del uso de la infraestructura de aws, en ella estan 2 carpetas, [pruebas](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/tree/main/aws/pruebas) y [proceso_completo](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/tree/main/aws/proceso_completo), en la primera carpeta se tienen las pruebas y diversas corridas realizadas, y en la segunda ya se tiene el proceso completo de la última versión del pipeline.
 
 - Carpeta [notebooks](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/tree/main/notebooks): Contiene las pruebas iniciales de las corridas, pipelines de monitoreo de parámetros.
 
@@ -64,11 +61,13 @@ Paulina: notebook que realiza tabla con las diferentes opciones de parámetros i
 
 - Archivo [test.py](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/blob/main/test.py): archivo que contiene los test al paquete.
 
-# Comando de docker
+## Comando de docker
 
-  
 
-# Referencias:
+## Botón de binder
+
+
+## Referencias:
 
 
 * [Crypto Trading and Arbitrage Identification Strategies](https://nbviewer.org/github/rcroessmann/sharing_public/blob/master/arbitrage_identification.ipynb)
