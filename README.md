@@ -39,11 +39,11 @@ Además se realizarón consultas entre los integrantes para resolver problemas e
 
 ### Individual
 
-*Aide*: análisis de parámetros en el problema de optimización y en el método númerico, creación de funciones de monitoreo de parámetros, creación inicial del docker con kale, lanzamientos de pipelines usando infraestructura de aws y actualización de tests usados en la práctica 1 parte 2, debido a que la función del método *bellman ford* cambio para el monitoreo de parámetros.
+**Aide**: análisis de parámetros en el problema de optimización y en el método númerico, creación de funciones de monitoreo de parámetros, creación inicial del docker con kale, lanzamientos de pipelines usando infraestructura de aws y actualización de tests usados en la práctica 1 parte 2, debido a que la función del método *bellman ford* cambio para el monitoreo de parámetros.
 
-*Paulina*: notebook que realiza tabla con las diferentes opciones de parámetros iniciales posibles y se actualiza documentación del paquete utilizando gh-pages.
+**Paulina**: notebook que realiza tabla con las diferentes opciones de parámetros iniciales posibles y se actualiza documentación del paquete utilizando gh-pages.
 
-*Joel*: Creación del Docker y del botón de binder. Corrección de algunos archivos de configuración para eliminar los errores en la ejecución de kubeflow, pruebas con kale y Kubeflow en AWS para verificar la correcta ejecución. Agregar columna de fecha en la tabla donde se muestras resultados con diferentes opciones de parámetros. Creación del documento de apoyo donde se incluyó la tabla y un error cuando se pasa un parámetro fuera de rango, se creó un pull request al project manager para la solución del error.
+**Joel**: Creación del Docker y del botón de binder. Corrección de algunos archivos de configuración para eliminar los errores en la ejecución de kubeflow, pruebas con kale y Kubeflow en AWS para verificar la correcta ejecución. Agregar columna de fecha en la tabla donde se muestras resultados con diferentes opciones de parámetros. Creación del documento de apoyo donde se incluyó la tabla y un error cuando se pasa un parámetro fuera de rango, se creó un pull request al project manager para la solución del error.
 
 ### Documentación
 
