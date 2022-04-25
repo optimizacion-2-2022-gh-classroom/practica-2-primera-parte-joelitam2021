@@ -1,87 +1,108 @@
-**Parte 1 de la práctica II, Optimización 2: uso de *Minikube, Kubeflow* y *Kale* para construcción y lanzamiento de pipelines de procesamiento y experimentación del paquete construído en la práctica 1 para resolver problemas de optimización convexa.**
+<p align = "center">
+    <img src="img/itam_logo.png" />
+</p>
 
-Antes de iniciar a trabajar: 
+# Parte 1 de la práctica II - Optimización 2
 
-* **Sólo una persona de cada equipo debe darle click a la liga** que está indicada en la publicación de canvas. Una vez que le dé click a la liga tal persona **invite** a sus integrantes de su equipo como **Admin**. Para invitar a su integrante ir dentro del repo a Settings -> Manage Access y enviar la invitación ingresando user de github de su integrante.
-    
+Uso de *Minikube, Kubeflow* y *Kale* para construcción y lanzamiento de pipelines de procesamiento y experimentación del paquete construído en la práctica 1 para resolver problemas de optimización convexa.
 
-# Instrucciones
+## Descripción
 
-Se encuentran en el archivo [instrucciones.ipynb](instrucciones.ipynb).
+Experimentación, construcción de pipelines vía Minikube, Kubeflow y Kale y reimplementaciones del método numérico realizado en la práctica 1 que resuelva problemas de optimización convexa de pequeña escala.
 
-Usen `git` para llevar la historia de cambios en la realización de sus notebooks o cualquier otro archivo y subirlos a sus repos. No se revisarán aquellos archivos que tengan un commit con todas las respuestas. El trabajo es incremental.
+El objetivo es realizar experimentos con las herramientas de Minikube, kubeflow y Kale para detectar con qué valores no funcionan sus programas. Cambien puntos iniciales, cambien criterios de paro, elijan diferentes ejemplos que los que utilizaron en los tests por ejemplo y reimplementen sus métodos que están en su paquete para mejorarlo y robustecerlo. Estos cambios de implementación deben de reflejarse automáticamente vía Github actions en la documentación del paquete, tests y en sus imágenes de Docker.
 
-**Deben usar la funcionalidad de github**: *issues*, *milestones*, *projects*, *reviewers*, *asignees* o lo que ustedes consideren de github que les ayudará a comunicarse/organizarse (no tienen que usar todas las funcionalidades anteriores y cada equipo decide qué usar). Ver por [ejemplo video para crear proyectos en github](https://youtu.be/z4Xpif7HI04).
+## Divisón del equipo
 
+| User| Equipo | Tareas | Roles |
+|:---:|:---:|:---:|:---:|
+AideJGC | 1 | Definición de parámetros que existen en el problema de optimización y en el método numérico. Construcción y lanzamiento de pipelines con Kale y monitoreo con el dashboard de Kubeflow.| Programadora
+pautrejo | 1 | Tabla con las corridas con los diferentes parámetros y documentación en gh-pages. | Programadora
+joelitam2021 | 1 | Creación de documento de apoyo | Programador
+jesusmb230795 | 1 | Revisión y agregación de nuevos test. | Project Manager
 
-# Dinámica
+## Trabajo
 
-Dividir a su equipo para realizar cuatro tareas. **Ustedes deciden qué integrante resuelve qué tarea (algunas personas tendrán que hacer más de una tarea)**:
+### Equipo
 
-1. 1 persona que defina cuáles son los parámetros que existen en su problema de optimización y en su método numérico. Ya definidos debe utilizarlos para construir y lanzar pipelines con [Kale](https://github.com/kubeflow-kale/kale) y monitorearlos con el dashboard de [Kubeflow](https://github.com/kubeflow/kubeflow). 
+Se hizo una reunión inicial para designar las siguientes tareas:
 
-2. 1 persona que escriba en una tabla las corridas con los diferentes parámetros utilizados del punto anterior, así como sus resultados y las fechas de lanzamiento. Para esto puede apoyarse del listado que se hace en el dashboard de Kubeflow.
+1. 1 persona que defina cuáles son los parámetros que existen en su problema de optimización y en su método numérico. Ya definidos debe utilizarlos para construir y lanzar pipelines con [Kale](https://github.com/kubeflow-kale/kale) y monitorearlos con el dashboard de [Kubeflow](https://github.com/kubeflow/kubeflow). **(Aide)**
 
-3. 1 persona que escriba un documento de apoyo en el que se incluya la tabla del punto anterior y posibles errores que hayan surgido en las corridas. Con tal documento debe informarle al *project manager* la creación de *issues* que atiendan tales errores y hacer reimplementaciones del paquete desarrollado en su práctica 1 para resolver tales *issues*.
+2. 1 persona que escriba en una tabla las corridas con los diferentes parámetros utilizados del punto anterior, así como sus resultados y las fechas de lanzamiento. Para esto puede apoyarse del listado que se hace en el dashboard de Kubeflow. **(Paulina)**
 
-4. 1 persona que sea *project manager* (más detalles de este rol en las notas) y haga una revisión que los *tests* creados en su práctica 1 continúan pasándose exitosamente con las reimplementaciones del punto anterior. Además, debe añadir nuevos *tests* que atiendan las reimplementaciones.
+3. 1 persona que escriba un documento de apoyo en el que se incluya la tabla del punto anterior y posibles errores que hayan surgido en las corridas. Con tal documento debe informarle al *project manager* la creación de *issues* que atiendan tales errores y hacer reimplementaciones del paquete desarrollado en su práctica 1 para resolver tales *issues*. **(Joel)**
 
-Lo anterior asume que tienen en su cuenta de AWS Academy una instancia con *Kale, Kubeflow* y *minikube* corriendo. Ver [6.Minikube y AWS: AWS Academy](https://github.com/ITAM-DS/analisis-numerico-computo-cientifico/wiki/6.Minikube-y-AWS) para esto y [video](https://youtu.be/SusT5xQN1ro) de la clase en la que discutimos tales herramientas. Aquí [minikube_kubeflow_kale_examples](https://github.com/palmoreck/minikube_kubeflow_kale_examples) encuentran *notebooks* ejemplos listos para lanzarse con *Kale* y monitorear su ejecución con *Kubeflow*.
+4. 1 persona que sea *project manager* (más detalles de este rol en las notas) y haga una revisión que los *tests* creados en su práctica 1 continúan pasándose exitosamente con las reimplementaciones del punto anterior. Además, debe añadir nuevos *tests* que atiendan las reimplementaciones. **(Enrique)**
 
-Entre todos los y las integrantes tienen que dar *feedback* si es necesario en la resolución de las tareas que haya duda entre ustedes. El *feedback* consiste en resolver/explicar las dudas que existan. **Las personas asignadas a la tarea correspondiente son las que realizan los *commits* una vez resueltas las dudas**.
+Además se realizarón consultas entre los integrantes para resolver problemas en cada tarea asignada, a fin de avanzar con el proyecto.
 
-Los puntos 1, 2, 3 y 4 anteriores los realizan de forma iterativa hasta finalizar las tareas y que estén en acuerdo las y los integrantes de cada equipo con las soluciones.
+### Individual
 
-# Lenguajes de programación
+**Aide**: análisis de parámetros en el problema de optimización y en el método númerico, creación de funciones de monitoreo de parámetros, creación inicial del docker con kale, lanzamientos de pipelines usando infraestructura de aws y actualización de tests usados en la práctica 1 parte 2, debido a que la función del método *bellman ford* cambio para el monitoreo de parámetros.
 
-Ustedes eligen el lenguaje de programación a usar. La sugerencia es *Python3*.
+**Paulina**: notebook que realiza tabla con las diferentes opciones de parámetros iniciales posibles y se actualiza documentación del paquete utilizando gh-pages.
 
-# Calificación
+**Joel**: Creación del Docker y del botón de binder. Corrección de algunos archivos de configuración para eliminar los errores en la ejecución de kubeflow, pruebas con kale y Kubeflow en AWS para verificar la correcta ejecución. Agregar columna de fecha en la tabla donde se muestras resultados con diferentes opciones de parámetros. Creación del documento de apoyo donde se incluyó la tabla y un error cuando se pasa un parámetro fuera de rango, se creó un pull request al project manager para la solución del error.
 
-La calificación de esta primera parte es la mitad de la práctica 2. Se asgina una calificación individual por tarea asignada y una calificación por equipo. Se calificará de acuerdo a los *commits* realizados y a los avances que realizan en su trabajo incremental. 
+**Enrique** Creación y validación de nuevos test dados los nuevos cambios en el proyecto.
 
-# AWS
+### Documentación
 
-Agendar reunión con el prof para que muestren el lanzamiento de los pipelines de procesamiento con Kale y monitoreo con Kubeflow. Tal reunión puede ser en cuanto ya tengan un *notebook* con celdas identificadas vía *Kale* y que vayan a utilizar para sus corridas. También puede ser una vez que tengan su reporte o un poquito después de la fecha de entrega de su práctica. En la reunión uds levantan la infraestructura en AWS para usar *Minikube, Kubeflow* y *Kale*.
+ [Bellman Ford](https://optimizacion-2-2022-gh-classroom.github.io/practica-2-primera-parte-joelitam2021/)
 
-Adjunten *screenshots* en un directorio de su repo para mostrar su uso de AWS, debe aparecer en el *screenshot* su nombre, clave única u otra forma de identificar su trabajo. En los *screenshots* incluyan la lista de experimentos, algunos de los resultados y el grafo ejecutados en *Kubeflow* así como el *notebook* con celdas identificadas vía *Kale*.
+### Descripción de archivos
 
-# Notas
+- Carpeta [.github/workflows](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/tree/main/.github/workflows): Contiene los archivos *.yml* encargados de lanzar la construcción del *docker*, la documentación del paquete y el lanzamiento de los *tests*
 
-* **Para la entrega crear un archivo con nombre:** `reporte_equipo_<aquí colocar_número>_parte_1_practica_2.ipynb` que contiene ejecución del paquete para los ejemplos elegidos y es el que me mostrarán en la reunión. Este *notebook* debe tener la identificación de las celdas con el panel de *Kale*. 
+- Carpeta [aws](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/tree/main/aws): Contiene evidencia del uso de la infraestructura de aws, en ella estan 2 carpetas, [pruebas](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/tree/main/aws/pruebas) y [proceso_completo](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/tree/main/aws/proceso_completo), en la primera carpeta se tienen las pruebas y diversas corridas realizadas, y en la segunda ya se tiene el proceso completo de la última versión del pipeline.
 
-* Es muy importante la **experimentación** para resolver problemas en la ciencia. En esta práctica este es uno de los **objetivos** para robustecer sus implementaciones con ambientes controlados :)
+- Carpeta [notebooks](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/tree/main/notebooks): Contiene las pruebas iniciales de las corridas, pipelines de monitoreo de parámetros.
 
-* *Project manager*: es la persona más importante para el éxito del proyecto. Conoce el/los objetivo(s) a resolver, detalla las tareas que realizarán el grupo de programación y el grupo de revisión (creación de *tests* en nuestro caso), organiza y asigna a personas a ambos grupos, crea tarjetas en el [project board de github](https://help.github.com/en/github/managing-your-work-on-github/creating-a-project-board) y [milestones](https://help.github.com/en/github/managing-your-work-on-github/tracking-the-progress-of-your-work-with-milestones) para dar seguimiento a [issues](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue). Mantiene un contacto directo con el prof para dudas que tengan y para avisar en qué fase se encuentran. Les explica a su equipo de trabajo la correcta creación de *issues*, solución de los mismos y el uso de *milestones* y del *project board*.
+- Carpeta [src](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/tree/main/src): Contiene el código del paquete *bellman ford*.
 
-* La división de las tareas y roles está está inspirada en el *framework* [scrum](https://www.youtube.com/watch?v=b02ZkndLk1Y&feature=emb_logo) en un ambiente laboral real (y en esta práctica estamos super-simplificando tal *framework*).
+- Archivo [reporte_equipo_1_parte_1_practica_2.ipynb](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/blob/main/reporte_equipo_1_parte_1_practica_2.ipynb): es el pipeline final con los parámetros a monitorear y las corridas para obtener la tabla de los parámetros.
 
-* Añadan referencias utilizadas para su trabajo en su `README.md`.
+- Archivo [requirements.txt](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/blob/main/requirements.txt): listado de paqueterías necesarias para el paquete y test.
 
-* **Los commits deben tener un mensaje explicatorio, no hacer lo siguiente:**
+- Archivo [setup.py](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/blob/main/setup.py): instalador del paquete.
 
-```
-git commit -m "create 1" -i archivo1.txt
+- Archivo [test.py](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/blob/main/test.py): archivo que contiene los test al paquete.
 
-git commit -m "update 1" -i archivo1.txt #qué es update 1?
+- Archivo [Doc_apoyo.ipynb](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/blob/main/Doc_apoyo.ipynb) : archivo que contiene tablas con corridas con distintos parámetros, resultados y algunas fechas de lanzamiento.
 
-git commit -m "update 2" -i archivo1.txt #qué es update 2?
+## Comando de docker
 
-git commit -m "update 3" -i archivo1.txt #qué es update 3?
-```
+Se cuenta con una imagen de docker que contiene preisntalado la nueva version deel paquete creado para ejecutar el método de Bellman Ford, y el en este link se puede ver el [Dockerfile](https://github.com/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021/blob/main/dockerfiles/pkg/Dockerfile)
 
-**así también para los *issues*, *projects*, *milestones*...**
+Para ejecutar el docker se usa la siguiente instrucción:
 
-* Esta organización es nuestro *playground* utilicen los repos de aquí para practicar :)
+docker run --rm -v \<ruta a mi directorio\> :/datos --name jupyterlab_practica2 -p 8888:8888 -d joelitam2021/pkg_practica2_parte1:0.1
 
-* Recuerden:
+donde ***\<ruta a mi directorio\>*** deberá sustituirse por la ruta local donde desee clonar este *docker*.
 
-    * ir guardando su trabajo si usan binder y usar `git` para llevar la historia de sus cambios en sus repos :)
-    * poner las referencias que utilizan (aún si le preguntan a una compañera o compañero de la clase coloquen esto en su entrega) pues no está permitido copiar y escribir que lo hicieron sin citar sus fuentes.
+Después de correr la imagen de docker en su computadora, podrá acceder al jupyterlab a través de un browser usando la siguiente dirección:
 
+http://localhost:8888
 
-* Para dudas creen un *room* de gitter e ínvitenme :) (si ya lo hicieron omitan este enunciado)
+Le pedirá una contraseña, que por defaul es qwerty.
 
-* **Su trabajo individual y su tiempo es muy valioso e importante, también el trabajo en equipo. Si alguna persona del equipo no realizó su tarea asignada, esperaría que lo resolvieran entre ustedes, si no lo resuelven avísenme y no realicen su tarea asignada. Si tienen algún problema (familiar, salud,...) infórmenme con tiempo para ver qué podemos hacer :)**
+## Botón de binder
 
+Se cuenta con la opción de correr el paquete usando la herramienta de Binder
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/optimizacion-2-2022-gh-classroom/practica-2-primera-parte-joelitam2021.git/main)
+
+## Referencias
+
+* [Crypto Trading and Arbitrage Identification Strategies](https://nbviewer.org/github/rcroessmann/sharing_public/blob/master/arbitrage_identification.ipynb)
+* [Video Dokerfile: example-docker-image-build-and-push](https://www.youtube.com/watch?v=wv7JGstFgrU&feature=youtu.be)
+* [Dokerfile curso](https://github.com/palmoreck/dockerfiles/blob/master/jupyterlab/optimizacion_2/3.2.8/Dockerfile)
+* [Video Get started with Binder](https://www.youtube.com/watch?v=owSGVOov9pQ)
+* [How to share a Jupyter notebook with Binder?](https://mybinder.readthedocs.io/en/latest/introduction.html)
+* [Pseudo código](https://www.simplilearn.com/tutorials/data-structure-tutorial/bellman-ford-algorithm)
+* [Bellman-Ford Algorithm](https://www.sciencedirect.com/topics/computer-science/bellman-ford-algorithm).
+* [bellman_ford_shortest_paths](https://www.boost.org/doc/libs/1_62_0/libs/graph/doc/bellman_ford_shortest.html)
+* [An Analysis of Bellman-Ford and Dijkstra’s Algorithm](https://melitadsouza.github.io/pdf/algos.pdf)
+* [6.Minikube y AWS](https://github.com/ITAM-DS/analisis-numerico-computo-cientifico/wiki/6.Minikube-y-AWS)
+* [Minikube, Kubeflow y Kale 2022](https://www.youtube.com/watch?v=SusT5xQN1ro)
