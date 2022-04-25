@@ -45,6 +45,8 @@ Además se realizarón consultas entre los integrantes para resolver problemas e
 
 **Joel**: Creación del Docker y del botón de binder. Corrección de algunos archivos de configuración para eliminar los errores en la ejecución de kubeflow, pruebas con kale y Kubeflow en AWS para verificar la correcta ejecución. Agregar columna de fecha en la tabla donde se muestras resultados con diferentes opciones de parámetros. Creación del documento de apoyo donde se incluyó la tabla y un error cuando se pasa un parámetro fuera de rango, se creó un pull request al project manager para la solución del error.
 
+**Enrique** Creación y validación de nuevos test dados los nuevos cambios en el proyecto.
+
 ### Documentación
 
  [Bellman Ford](https://optimizacion-2-2022-gh-classroom.github.io/practica-2-primera-parte-joelitam2021/)
